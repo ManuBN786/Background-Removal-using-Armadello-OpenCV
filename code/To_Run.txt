@@ -1,0 +1,10 @@
+g++ -o ForegroundSegmentation main.cpp input_preprocessor.cpp -fopenmp -DARMA_DONT_USE_WRAPPER -lopenblas -llapack -larmadillo -std=c++11 `pkg-config opencv --cflags --libs'
+
+
+./ForegroundSegmentation /home/user/Downloads/foreground_detection_code/seq/ seqs
+
+
+
+Installation Instructions:
+
+https://solarianprogrammer.com/2017/03/24/getting-started-armadillo-cpp-linear-algebra-windows-mac-linux/
