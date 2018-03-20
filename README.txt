@@ -15,6 +15,10 @@ g++ -o ForegroundSegmentation main.cpp input_preprocessor.cpp -fopenmp -DARMA_DO
 ./ForegroundSegmentation /home/user/Downloads/foreground_detection_code/seq/ seqs
 
 
+where: ./ForegroundSegmentation  <set input path sequence>   <sequence name>
+<set input path sequence> is location of frames from the video
+<sequence name> is the sequence name
+
 
 Installation Instructions:
 
