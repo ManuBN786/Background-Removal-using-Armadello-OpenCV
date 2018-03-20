@@ -1,30 +1,3 @@
-----------------------
-Citation Details
-----------------------
-  
-Please cite the following journal article when using this source code:
-  
-  V. Reddy, C. Sanderson, B.C. Lovell.
-  Improved Foreground Detection via Block-based Classifier Cascade with Probabilistic Decision Integration.
-  IEEE Transactions on Circuits and Systems for Video Technology, Vol. 23, No. 1, pp. 83-93, 2013.
-  
-  DOI: 10.1109/TCSVT.2012.2203199
-  
-You can obtain a copy of this article via:
-http://dx.doi.org/10.1109/TCSVT.2012.2203199
-
-    
-
-----------------------
-License
-----------------------
-  
-The source code is provided without any warranty of fitness for any purpose.
-You can redistribute it and/or modify it under the terms of the
-GNU General Public License (GPL) as published by the Free Software Foundation,
-either version 3 of the License or (at your option) any later version.
-A copy of the GPL license is provided in the "GPL.txt" file.
-
 
 
 ----------------------
@@ -32,20 +5,20 @@ Instructions and Notes
 ----------------------
 
 To run the code the following libraries must be installed:
-1. OpenCV 2.4 (later versions should also work)
-2. Armadillo 3.920 - http://arma.sourceforge.net
+1. OpenCV 3.3 (later versions should also work)
+2. Armadillo 3.920 or higher - http://arma.sourceforge.net
+
+To Run:
+g++ -o ForegroundSegmentation main.cpp input_preprocessor.cpp -fopenmp -DARMA_DONT_USE_WRAPPER -lopenblas -llapack -larmadillo -std=c++11 `pkg-config opencv --cflags --libs'
 
 
-Under Linux, to compile the code use the following command:
-g++ -o ForegroundSegmentation main.cpp input_preprocessor.cpp -O2 -fopenmp -I/usr/include/opencv -I/usr/local/include/opencv -L/usr/lib64 -L/usr/local/lib -larmadillo -lopencv_core -lopencv_highgui -lopencv_imgproc
+./ForegroundSegmentation /home/user/Downloads/foreground_detection_code/seq/ seqs
 
-You may need to adapt the paths for libraries and includes to suit your environment.
-The above command line has been tested on Fedora 19, using Armadillo 3.920.2 and OpenCV 2.4.6
 
-After successful compilation, to execute the code, run the following command: 
-./ForegroundSegmentation  <set input path sequence>   <sequence name>
-For example:
-./ForegroundSegmentation  /home/Project/datasets/UCSD/seq1/  seq1 
+
+Installation Instructions:
+
+https://solarianprogrammer.com/2017/03/24/getting-started-armadillo-cpp-linear-algebra-windows-mac-linux/
 
 
 Points to note:
